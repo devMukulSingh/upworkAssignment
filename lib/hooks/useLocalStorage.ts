@@ -1,4 +1,3 @@
-'use client'
 
 export const getFromLocalStorage = (key:string) => {
     const data = typeof window!=="undefined" ? JSON.parse(localStorage.getItem(key)||"{}") : "";
