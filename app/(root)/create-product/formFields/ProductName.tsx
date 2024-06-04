@@ -7,8 +7,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Iform } from "../../components/Categories";
 import { Input } from "@/components/ui/input";
+import { Iform } from "../page";
 
 const ProductName: FC<Iform> = ({ form, disabled }) => {
   return (
