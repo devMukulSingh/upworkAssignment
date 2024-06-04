@@ -1,7 +1,7 @@
 'use client'
 
 export const getFromLocalStorage = (key:string) => {
-    return JSON.parse(localStorage.getItem(key)||"{}");
+    return typeof window!=="undefined" ? JSON.parse(localStorage.getItem(key)||"{}") : "";
 }
 
 export const setInLocalStorage = (key:string,value:any) => {

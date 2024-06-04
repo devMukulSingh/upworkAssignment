@@ -1,3 +1,4 @@
+'use client'
 export function localStorageProvider() {
   // When initializing, we restore the data from `localStorage` into a map.
   const map = new Map(JSON.parse(localStorage.getItem("app-cache") || "[]"));

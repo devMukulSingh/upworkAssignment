@@ -43,7 +43,7 @@ const SignInPage = () => {
       },
       onSuccess(data) {
         setIsFetching(false);
-        localStorage.setItem('user',JSON.stringify(data.data))
+         localStorage.setItem('user',JSON.stringify(data.data))
         router.push("/");
       },
     });
