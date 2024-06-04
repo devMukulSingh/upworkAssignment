@@ -13,6 +13,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import useSWR from "swr";
+import { setInLocalStorage } from "@/lib/hooks/useLocalStorage";
 
 type formValues = z.infer<typeof signInSchema>;
 
@@ -43,7 +44,7 @@ const SignInPage = () => {
       },
       onSuccess(data) {
         setIsFetching(false);
-         localStorage.setItem('user',JSON.stringify(data.data))
+          setInLocalStorage("user", data.data);
         router.push("/");
       },
     });

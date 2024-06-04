@@ -1,10 +1,11 @@
 'use client'
 
 export const getFromLocalStorage = (key:string) => {
-    return typeof window!=="undefined" ? JSON.parse(localStorage.getItem(key)||"{}") : "";
+    const data = typeof window!=="undefined" ? JSON.parse(localStorage.getItem(key)||"{}") : "";
+    return data;
 }
 
 export const setInLocalStorage = (key:string,value:any) => {
-    localStorage.setItem(key,JSON.stringify(value));
+    if(typeof window!=="undefined") localStorage.setItem(key,JSON.stringify(value));
     return;
 }

@@ -35,7 +35,7 @@ const SignupPage = () => {
             console.log(`Error in createUser`,err);
         },
         onSuccess(data){
-            localStorage.setItem("user", JSON.stringify(data.data));
+            setInLocalStorage('user',data.data)
             router.push('/');
         }
     });
